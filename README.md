@@ -15,7 +15,7 @@ At this stage, FG-TIDA is intentionally keeping the process open: raising a them
 
 ## Starting point
 
-The six themes raised during the [1st Interregnum preparation meeting](https://github.com/FG-TIDA/meetings/blob/main/2026-07-29-preparation-meeting-1/minutes.md) (29 July 2026) are captured in [`themes/candidate-themes-from-2026-07-29.md`](./themes-/blob/main/candidate-themes-from-2026-07-29.md) as a reference. Anyone is welcome to open these (or new ones) as individual Issues to start the discussion.
+The six themes raised during the [1st Interregnum preparation meeting](https://github.com/FG-TIDA/meetings/blob/main/2026-07-29-preparation-meeting-1/minutes.md) (29 July 2026) are captured in [`themes/candidate-themes-from-2026-07-29.md`](candidate-themes-from-2026-07-29.md) as a reference. Anyone is welcome to open these (or new ones) as individual Issues to start the discussion.
 
 ## Timeline
 
