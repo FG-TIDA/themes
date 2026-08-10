@@ -1,7 +1,7 @@
 ---
 name: Theme Proposal
 about: Propose a new theme for FG-TIDA to explore
-title: "[Theme] <short name>"
+title: "[Theme] <Replace this tag (brackets and all) with the actual theme name. Leave the tag [theme]>"
 labels: theme-proposal
 assignees: ''
 ---
