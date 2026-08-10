@@ -19,14 +19,14 @@ At this stage, FG-TIDA is intentionally keeping the process open: raising a them
 
 ## Labels
 
-| Label | Meaning |
-|---|---|
-| `theme-proposal` | Applied automatically by the issue template |
-| `needs-input` | Scope still fuzzy, needs more discussion |
-| `overlaps` | Likely overlaps with another open theme — candidate for merging |
-| `ready-for-next-call` | Mature enough to bring to the next call |
-| `merged` | Folded into another theme issue |
-| `parked` | No traction / deprioritized for now |
+| Label | Color | Meaning |
+|---|---|---|
+| `theme-proposal` | 🟢 Green (`#0E8A16`) | Applied automatically by the issue template |
+| `needs-input` | 🟡 Yellow (`#FBCA04`) | Scope still fuzzy, needs more discussion or detail from the proposer |
+| `overlaps` | 🟠 Orange (`#D93F0B`) | Likely overlaps with another open theme — candidate for merging |
+| `ready-for-discussion-in-next-call` | 🩷 Pink (`#FF69B4`) | Mature enough to bring to the next preparation call |
+| `graduated-to-wg` | 🟢 Dark green (`#0B6623`) | Formalized into a Working Group |
+| `parked` | ⚪ Gray (`#6A737D`) | No traction / deprioritized for now, kept open for reference |
 
 ## Starting point
 
