@@ -21,7 +21,8 @@ This charter uses the following working definitions, to be formalized in Deliver
 
 **Provenance.** The examinable history of a grant from origination through every composition, constraint, and revocation applied to it. Origination is where the chain begins; provenance is the state of the chain when the agent acts.
 
-**Standing of authority.** Whether a grant was authored at all, by a party with standing to confer it — a human, organization, or public authority within what it possesses or has itself been granted — and within what that party could confer. Standing is a property of the grant's origination, not of any downstream representation of it: an artifact that carries a grant does not establish that the grant has standing.
+**Standing of authority.** Whether a grant was authored at all, by a party with standing to confer it — a human, organization, or public authority within what it possesses or has itself been granted — and within what that party could confer. Standing is a property of the grant's origination, not of any downstream representation of it: an artifact that carries a grant does not establish that the grant has standing.  Standing admits two determinations of this one property, made at two moments: at origination, whether the grantor could and did confer; at act time, whether the grant continues to bind. Both are made under the legal regime governing the mandate — which fixes at what moment standing may change, and with what continuing effect — and neither is established by a downstream artifact.
+
 
 **Anchor integrity.** The binding between a durable anchor and the mutable records attached to it, examined for whether the binding itself has been rewritten.
 
@@ -35,7 +36,7 @@ The theme specifies five elements. Deliverables map to them one-to-one.
 
 **4. Anchor integrity.** Requirements for detecting and asserting rewrites of the anchor-to-record binding, including hardened identity theft and its agentic analogues.
 
-**5. Composition and revocation.** Survival under composition: what happens to provenance when agents re-delegate, compose at runtime into configurations no single party holds, or re-advertise capabilities several hops from the originating principal; how authority traces to a human principal; and what revocation does to a chain that has already composed. Semantics only; enforcement of revocation at runtime or in infrastructure is consumed by other themes.
+**5. Composition and revocation.** Survival under composition: what happens to provenance when agents re-delegate, compose at runtime into configurations no single party holds, or re-advertise capabilities several hops from the originating principal; how authority traces to a human principal; and what revocation does to a chain that has already composed. Semantics only; enforcement of revocation at runtime or in infrastructure is consumed by other themes. Within those semantics, expiry and revocation act on the second determination of standing: they end or narrow what a grant continues to bind, from the moment the governing regime fixes, and they do not amend origination, which remains in the chain as history. Where the chain has already composed, the change enters each affected grant's provenance as a new record, per scope element 2 — the grant originated then, and does not bind now, and the record shows both.
 
 ## Out of Scope
 
