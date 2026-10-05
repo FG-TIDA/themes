@@ -1,4 +1,5 @@
 name: Sync Code to GitLab
+
 on:
   push:
     branches:
@@ -31,7 +32,6 @@ jobs:
         run: |
           git config user.name "GitHub-GitLab Sync Bot"
           git config user.email "github-gitlab-sync-bot@users.noreply.github.com"
-
       - name: Validate GitLab configuration
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
@@ -41,32 +41,24 @@ jobs:
             echo "ERROR: GITLAB_TOKEN is not configured."
             exit 1
           fi
-
           if [ -z "$GITLAB_REPO_URL" ]; then
             echo "ERROR: GITLAB_REPO_URL_THEMES is not configured."
             exit 1
           fi
-
           echo "GitLab repository URL is configured."
-
       - name: Add GitLab remote
         env:
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
           GITLAB_REPO_URL: ${{ secrets.GITLAB_REPO_URL_THEMES }}
         run: |
           GITLAB_HOST="${GITLAB_REPO_URL#https://}"
-
           git remote add gitlab \
             "https://oauth2:${GITLAB_TOKEN}@${GITLAB_HOST}"
-
           echo "GitLab remote configured."
-
       - name: Synchronize branches
         run: |
           git push gitlab \
             'refs/heads/*:refs/heads/*'
-
       - name: Synchronize tags
         run: |
           git push gitlab \
-            'refs/tags/*:refs/tags/*'
