@@ -19,7 +19,7 @@ Agentic-AI trust work is currently framed mainly from the producer side: how an 
 ## Out of Scope
 
 - **Agentic-AI protocols and transport.** Message formats, discovery transports, and agent-to-agent protocol design are handled elsewhere.
-- **AI governance frameworks.** Organisational governance, accountability regimes, and policy instruments are out of scope, except where they are the source of a verifier-side requirement.
+- **Governance and accountability frameworks.** Organisational governance, accountability regimes, and policy instruments are out of scope, except where they are the source of a verifier-side requirement.
 - **Digital ID and credential formats.** Identifier and credential syntax (W3C DID/VC, X.509, and national identity-code specifications) is out of scope; this theme addresses the layer that verifies claims, not the layer that encodes them.
 - **Reference-implementation advocacy.** The theme does not promote a particular implementation; any artefact cited is offered as material for discussion.
 
@@ -33,11 +33,9 @@ Agentic-AI trust work is currently framed mainly from the producer side: how an 
 ## Related Work
 
 - **IETF RATS** — attestation consumption and appraisal; this theme addresses the relying-party obligations that sit on top of it.
-- **Sigstore / Rekor**, **Software Heritage** — transparency-log and archival anchors used as publicly resolvable evidence in the examples below.
+- **Transparency-log and archival anchoring** — the mechanisms by which an evidence record is made publicly resolvable without contacting its producer.
 - **NIST AI RMF**, **EU MDR / AI Act conformity regimes** — control objectives and regulated-domain constraints that motivate the requirements.
-- **uibc-core** — an evidence-package reference implementation: DOI `10.5281/zenodo.22821834`, with a Sigstore Rekor transparency-log entry and a Software Heritage SWHID, so an appraisal can be recomputed from the record alone.
-- **agent-trust-identity-spec** — 4 stages x 20 minimum verifiable requirements with 20 rule codes (groups `REG-` / `AUT-` / `CVF-` / `AUD-`), offered as material for discussion rather than as a proposed framework.
-- **silent-failure-catalog** — documented failure semantics of "verification passed" states in which a check reports success while checking nothing.
+- **Verifier-side failure semantics** — work on the failure shape in which a check reports success while checking nothing, raised in the #7 and #30 threads.
 
 ## Related Themes
 
