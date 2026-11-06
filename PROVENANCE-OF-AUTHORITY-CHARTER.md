@@ -1,25 +1,24 @@
-
-
-
 # Provenance of Authority for Agentic AI — Charter
 
 **Status:** Draft **Originating issue:** #5 **Proposer(s) / drafter(s):** Pam Dixon, World Privacy Forum
 
 ## Summary
 
-Every agentic action stands on a claim of authority: that one or more parties conferred the capacity to act, that the conferral was within what those parties could confer, and that the chain from that conferral to the acting agent can be examined by a party who was not there. The themes currently open specify how authority is represented, verified, attested, discovered, enforced, and bound — with each of these operations presupposing that the authority exists. None examines where it originates, what may never be conferred, or how it traces to a human principal. That is the layer this charter specifies.
+Every agentic action stands on a claim of authority: that one or more parties conferred the capacity to act, that the conferral was within what those parties could confer, and that the chain from that conferral to the acting agent can be examined by a party who was not there. The themes currently open specify how authority is represented, verified, attested, discovered, enforced, and bound — with each of these operations presupposing that the authority exists. None examines where it originates, what may never be conferred, or how it traces to a human principal. That is the layer this charter specifies. The object this theme governs is the conferral record — the grant, its bounds, who conferred it, and its standing at the moment of the act. This charter specifies that record: what it must contain, how it changes, and what a consultation of it returns.
 
-The failure this layer exists to prevent has a precise shape. It is invisible to conformance checking of the authority structure. If the principal at the root of a delegation chain is bound to a corrupted identity record, everything that can be checked is correct. Each link verifies, the mandate travels intact, limits survive composition, revocation propagates as specified, and behavior conforms to the authored intent. Everything is correct except the root, and the root is the one thing no layer evaluates. The shape of this failure is not particular to biometrics. The same failure occurs wherever a durable anchor is bound to a mutable record, which would include an agent credential or an attestation bound to a rewritten operator record. Its record-side twin, silent normalisation — a reference manufactured because a format expects one — has been fixed in sub-theme #9; its origination-side twin is a grant presumed because an artifact carries one. Both are prevented only if the origination layer is specified in its own right.
+The failure this layer exists to prevent has a precise shape. It is invisible to conformance checking of the authority structure. If the principal at the root of a delegation chain is bound to a corrupted identity record, everything that can be checked is correct. Each link verifies, the mandate travels intact, limits survive composition, revocation is recorded as specified, and behavior conforms to the authored intent. Everything is correct except the root, and the root is the one thing no layer evaluates. The shape of this failure is not particular to biometrics. The same failure occurs wherever a durable anchor is bound to a mutable record, which would include an agent credential or an attestation bound to a rewritten operator record. Its record-side twin, silent normalisation — a reference manufactured because a format expects one — has been fixed in sub-theme #9; its origination-side twin is a grant presumed because an artifact carries one. Both are prevented only if the origination layer is specified in its own right.
 
 ## Scope
 
 This charter uses the following working definitions, to be formalized in Deliverable 1 (D1).
 
-**Authority.** The capacity to act. Authority is possessed or granted. A principal possesses authority — a human within their own capacity, or an institution of humans under law, mandate, or charter; a grant confers a bounded portion of it on another party or agent. A conferral is a **grant**; the party conferring is the **grantor**; the party or agent receiving is the **grantee**. Chains of delegation terminate in possessed authority.
+**Authority.** The capacity to act. Authority is possessed or granted. A principal possesses authority — a human within their own capacity, or an institution of humans under law, mandate, or charter; a grant confers a bounded portion of it to another party or agent. A conferral is a **grant**; the party conferring is the **grantor**; the party or agent receiving is the **grantee**. Chains of delegation terminate in possessed authority.
 
 **Origination.** The authoring of a grant: by whom, with what standing, of what, within what the grantor could confer, in what form, and when.
 
 **Provenance.** The examinable history of a grant from origination through every composition, constraint, and revocation applied to it. Origination is where the chain begins; provenance is the state of the chain when the agent acts.
+
+**Conferral record.** The record of a grant as consulted at the act: the grant, its bounds, who conferred it, and its standing at the moment of the act. It carries the grant's provenance. What it must contain, how it changes, and what a consultation of it returns are specified in scope elements 2 and 5.
 
 **Standing of authority.** Whether a grant was authored at all, by a party with standing to confer it — a human, organization, or public authority within what it possesses or has itself been granted — and within what that party could confer. Standing is a property of the grant's origination, not of any downstream representation of it: an artifact that carries a grant does not establish that the grant has standing.  Standing admits two determinations of this one property, made at two moments: at origination, whether the grantor could and did confer; at act time, whether the grant continues to bind. Both are made under the legal regime governing the mandate — which fixes at what moment standing may change, and with what continuing effect — and neither is established by a downstream artifact.
 
@@ -36,7 +35,7 @@ The theme specifies five elements. Deliverables map to them one-to-one.
 
 **4. Anchor integrity.** Requirements for detecting and asserting rewrites of the anchor-to-record binding, including hardened identity theft and its agentic analogues.
 
-**5. Composition and revocation.** Survival under composition: what happens to provenance when agents re-delegate, compose at runtime into configurations no single party holds, or re-advertise capabilities several hops from the originating principal; how authority traces to a human principal; and what revocation does to a chain that has already composed. Semantics only; enforcement of revocation at runtime or in infrastructure is consumed by other themes. Within those semantics, expiry and revocation act on the second determination of standing: they end or narrow what a grant continues to bind, from the moment the governing regime fixes, and they do not amend origination, which remains in the chain as history. Where the chain has already composed, the change enters each affected grant's provenance as a new record, per scope element 2 — the grant originated then, and does not bind now, and the record shows both.
+**5. Composition, revocation and consultation.** Survival under composition: what happens to provenance when agents re-delegate, compose at runtime into configurations no single party holds, or re-advertise capabilities several hops from the originating principal; how authority traces to a human principal; and what revocation does to a chain that has already composed. Semantics only; enforcement of revocation at runtime or in infrastructure is consumed by other themes. Within those semantics, expiry and revocation act on the second determination of standing: they end or narrow what a grant continues to bind, from the moment the governing regime fixes, and they do not amend origination, which remains in the chain as history. Where the chain has already composed, the change enters each affected grant's provenance as a new record, per scope element 2 — the grant originated then, and does not bind now, and the record shows both. A revocation is a change in the record, not an event carried to the act; standing is consulted at the act, not propagated. This element also specifies what a consultation of the record at the act returns. A consultation's return states the version or recency of the record consulted. An act that could not reach the record has no finding about standing, and must not report one.
 
 ## Out of Scope
 
@@ -54,6 +53,7 @@ Beyond this boundary, the following are explicitly out of scope, especially wher
 - Records and reconstruction (theme #1). The relation between themes #1 and #5 is mutual, not sequential: provenance determines what a record can truthfully say about authority; the record's own properties determine whether it survives a party who was not there.
 - The "never-crisply-authored" case is jointly held in sub-theme #9 with #1 and #6, and this charter mirrors its non-goals: theme #5 is not a protocol specification, and it is not a liability framework.
 - Governance, enforcement, monitoring, and lifecycle management of agents, including network-level enforcement. These consume the origination layer; they are specified elsewhere.
+- What the decision does with what it read — the outcome it returns and the record it leaves (the run-time workstream of the Working Group proposed in #59). Both consume the conferral record; this theme specifies it.
 - Remote attestation; discovery.
 - Binding and mandate artifact formats, and the apportionment of responsibility along an agent-to-principal chain. Artifacts reference authored grants; whether a grant exists, and its standing, are prior and live here. Apportionment is a liability question and out of scope.
 - Protocol specification; liability frameworks.
@@ -68,13 +68,15 @@ Beyond this boundary, the following are explicitly out of scope, especially wher
 
 **D4 — Anchor-integrity requirements.** Requirements for asserting and detecting binding rewrites.
 
-**D5 — Composition and revocation semantics.**
+**D5 — Composition, revocation and consultation semantics.**
 
-These deliverables are authored as the origination layer of the trust ecosystem as discussed in scoping. The deliverables D1–D5 are consumed, not duplicated, by the other open themes: verification verdicts evaluate conformance to grants this layer defines; records carry what this layer defines for carriage; governance and enforcement themes constrain, monitor, and revoke within lifecycles whose origination this layer specifies; binding and mandate artifacts reference grants whose standing this layer establishes. Within the layered model proposed as candidate theme 6, this layer sits at the foundation. Initial D1 text will be circulated before the 4 November call, depending on necessity as determined by community input.
+These deliverables are authored as the origination layer of the trust ecosystem as discussed in scoping. The deliverables D1–D5 are consumed, not duplicated, by the other open themes: verification verdicts evaluate conformance to grants this layer defines; records carry what this layer defines for carriage; governance and enforcement themes constrain, monitor, and revoke within lifecycles whose origination this layer specifies; binding and mandate artifacts reference grants whose standing this layer establishes. Within the layered model proposed as candidate theme 6, this layer sits at the foundation. Initial D1 text will be circulated before the Paris meeting (30 November – 1 December 2026).
 
 ## Related Work
 
 Published testimony of the proposer to the Council of Europe's inaugural meeting of the Committee on New and Emerging Technologies (worldprivacyforum.org/posts/remarks-of-pam-dixon-to-the-council-of-europes-inaugural-meeting-of-the-committee-on-new-and-emerging-technologies/), as anchored in Issue #5. A DOI for the forthcoming research underlying this theme will be added when published, as noted in the issue thread.
+
+Use cases under this theme: FG-TIDA/use-cases#9, FG-TIDA/use-cases#10 and FG-TIDA/use-cases#46 — the last a standing delegation to an agent operator, re-conferred to every agent act, paid across two governing regimes; a live case, not a hypothetical. Two informative inputs to D2 have been received in the discussion of this pull request, the Foundation Protocol mapping and the Agent Manifest negative carriage case; each is to stand as a separate attributed contribution linked from the pull request, and neither amends the charter.
 
 Existing identity-assurance standards and evaluation work are referenced by D4, not reproduced. Legal doctrine on agency and mandate, across jurisdictions, is coordination ground for D1.
 
@@ -89,6 +91,9 @@ Relations are stated in the terms this repository uses — depends on, feeds int
 - **Mechanism themes (#11, #12, #13), attestation inputs (#7), discovery (#2), and cross-border trust management (#8, corresponding to candidate theme 5):** consume the origination layer.
 - **Binding themes (#14):** binding artifacts reference grants whose standing this layer establishes; the legal personhood / delegation cross-cutting note from the 29 July preparation meeting is adjacent to D1's coordination ground.
 - **Candidate theme 6 (agent identity and trust stack):** within that model's layering, this theme is the foundation.
+- **#59 (agentic AI trust control plane Working Group, Terms of Reference A.2.7):** this theme joins as a workstream and a named deliverable of the group, should the Focus Group accept it, with this charter as its input document and its own pen. On the clause mapping it sits on A.2.5, trust interoperability requirements across jurisdictions and sectors, alongside #41, FG-TIDA/use-cases#46 being a two-regime case. The line with the run-time workstream is drawn in Out of Scope: this theme specifies the record consulted at the act; the run-time workstream specifies what the decision does with what it read. The inputs an enforcement point reads at decision time are listed by object in #60, the joint issue with WG2, of which this theme is a drafter.
+- **#18:** its catalogue material stays under declaration and measurement; it consumes the origination layer.
+- **#13:** FG-TIDA/use-cases#46 is offered as the surface for the kill-switch drill — revoke the conferral between two acts, and measure not the time to acknowledgement but whether the next act proceeded.
 
 ## Open Questions
 
@@ -96,7 +101,7 @@ Two of this theme's original open questions have since been resolved on the reco
 
 - What a relying party actually evaluates: the agent, or the conformance of the operating authority structure to the authored one.
 - Where the gates sit — at assignment, at composition, at re-advertisement (D5 coordination).
-- How revocation propagates through a chain that has already composed (D5).
+- What remains for run time after act-time consultation: how stale a copy of the record may be, what an act does when it cannot reach it, and how two copies that disagree are detected — questions about the record, at the seam with the run-time workstream under #59 (D5 coordination).
 - Which existing credential and mandate formats can carry a grant's content and provenance, and which require extension (D2).
 - Where the boundary between D4's anchor-integrity requirements and existing identity-assurance evaluation work sits, so that D4 references rather than reproduces it.
 - How standing of authority relates to legal doctrines of agency and mandate across jurisdictions (D1 coordination).
