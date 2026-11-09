@@ -34,4 +34,4 @@ The six themes raised during the [1st Interregnum preparation meeting](https://g
 
 ## Timeline
 
-Refined themes and their discussion will feed into the **2 September 2026** preparation call, and ultimately into the deliverables to be announced at the **Paris meeting (1–4 December 2026)**.
+Refined themes and their discussion will feed into the **2 September 2026** preparation call, and ultimately into the deliverables to be announced at the **Paris meeting (30 November–1 December 2026)**.
