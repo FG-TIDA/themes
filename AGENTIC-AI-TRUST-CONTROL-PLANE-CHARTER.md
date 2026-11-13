@@ -62,6 +62,7 @@ The architecture states what a cluster is for control purposes and where account
 - **D. Technical requirements arising from governance (#41)** [if its proposers wish, at a later stage]. *Object: the technical requirements that governance places on trust and identity mechanisms.*
   - As reframed on #41: technical requirements arising from governance, and governance implications of technical trust and identity choices, anchored in A.2.1, A.2.4 and A.2.5.
 - **E. Act-time consultation and run-time consistency (new).** *Object: the availability and consistency of the record of authority and of decided changes (revocation, intervention, mode change) where acts consult it, and the copies of it held there. Workstream A specifies the record's content and how it changes; this workstream specifies its availability where it is consulted; WG2 specifies what the decision does with what it read.*
+  - The reach of a decided change: which acts, agents and delegated workers it concerns. Its content stays with Workstream A, and the human decision with #16 (see #60).
   - Whether each act consulted the record, and evidence of that, independent of the component that acknowledged the change.
   - How stale a copy of the record may be; what an act does when it cannot reach the record; how two copies that disagree are detected; observe-before-enforce transitions.
   - Acts already under way when the record changes: long-running acts, and acts of delegated workers fanned out from one agent.
@@ -74,6 +75,7 @@ The architecture states what a cluster is for control purposes and where account
 
 - They are aligned with TIDA6-FX and usable on the UC-4 testbed.
 - They include the kill-switch conformance drill proposed on #13, run on the live case in use-cases#46: revoke the conferral between two acts, and measure whether the next act proceeded.
+- Cases contributed from other themes are welcome as candidates, reviewed jointly with their authors, for example FG-TIDA/use-cases#21 (cases 00G and 00I, with #13).
 
 ## Out of Scope
 
@@ -106,7 +108,8 @@ Themes not listed as workstreams do not move into this group; interfaces with th
 Milestones, aligned with the FG calendar:
 
 - **Paris:** charter presented, with the workstreams that have joined (#5, #42) and those still open (#41), and a D1 outline.
-- **Geneva:** a first draft of D1, a D5 outline and fixtures v0.1.
+- **Geneva:** a first draft of D1, outlines of D4 and D5, and fixtures v0.1.
+- **D4 and D5,** the group's two Technical Specifications, share one target so that they can be reviewed together: first drafts at the third meeting, agreement at the fourth.
 - **Later meetings:** remaining deliverables on the schedules their workstreams set.
 
 ## Related Work
@@ -141,4 +144,6 @@ Milestones, aligned with the FG calendar:
 - **Clusters** (@pdixon-wpf, @taddhar). What is a cluster for control purposes, and where does accountability sit when the operator is declared per cluster but authority is conferred per mandate?
 - **#41.** A workstream here, or a group of its own with a defined interface? That is for its proposers to say.
 - **#23 and #29.** Do they belong here, or at an interface?
+- **ToR A.2.2** (a trust lifecycle framework for agentic AI). This charter does not map it. Where it belongs, here or elsewhere, is to be decided with the themes that work on lifecycles (#23, #38–#40).
+- **Results composed from several sources** (@dakleyer). Should D1 name an interface with #13's interpretation function (F2), through which a receiving party qualifies results that rely on several sources? Such qualification would not change source-owned objects, confer authority or replace the per-operation decision. To be tested first against the existing objects (#60).
 - **The common intervention interface.** What is the smallest one agent platforms could honour?
